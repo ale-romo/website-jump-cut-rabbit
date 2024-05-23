@@ -52,23 +52,12 @@ export default function Home() {
   };
 
   return (
-    <main className="w-full h-screen fixed top-0 left-0 z-0 overflow-hidden">
+    <main className="w-full h-screen fixed top-0 left-0 z-0 overflow-hidden flex justify-center items-center">
       <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-        <div className="video-container">
+        <div className="absolute inset-0 m-auto">
           <Video videoId="O6TbrxNPcOU" opts={videoOptions} ref={videoRef} />
         </div>
       </div>
-      <style jsx>{`
-        .video-container {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-          height: 100%;
-          pointer-events: none; /* Disable mouse interaction */
-        }
-      `}</style>
     </main>
   );
 }

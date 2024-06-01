@@ -72,7 +72,7 @@ export default function Home() {
       controls: 0, // Hide player controls
       modestbranding: 1, // Hide YouTube logo and some UI elements
       loop: 1, // Loop the video
-      playlist: 'O6TbrxNPcOU', // Specify the video ID
+      playlist: 'DUfv1v_onVA', // Specify the video ID
       mute: 1, // Mute the video
       origin: 'https://your-website-url.com', // Specify the origin
       // Set desired playback quality
@@ -100,11 +100,11 @@ export default function Home() {
         </DrawerContent>
       </Drawer>
       <div className={`pointer-events-none fixed z-0 top-0 ${openMenu ? 'blur-lg': ''}`}>
-        <Video videoId="DUfv1v_onVA" opts={videoOptions} ref={videoRef} />
+        <Video videoId="" opts={videoOptions} ref={videoRef} />
       </div>
-      <div className={`h-screen flex flex-col w-full z-10 items-center justify-center opacity-70 gap-4 md:gap-8 ${openMenu ? 'blur-lg': ''}`}>
-        <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className="h-auto w-48" />
-        <h1 className="text-white text-3xl md:text-6xl tracking-widest font-heading">Jump Cut Rabbit</h1>
+      <div className={`h-screen flex w-full z-10 items-center justify-center  gap-4 md:gap-8 ${openMenu ? 'blur-lg': ''}`}>
+        <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className="h-auto w-8 md:w-20 fixed top-4 left-5" />
+        <h1 className="text-white text-2xl mt-20 md:text-5xl tracking-widest font-heading uppercase">JumpCut Rabbit</h1>
       </div>
       <div className="flex z-10 bg-white w-full items-center flex-wrap">
         {clients.map((client, i) => <Image key={`${client}-${i}`} src={client.url} alt={client.name} width="0" height="0" className="w-60 h-auto"/>

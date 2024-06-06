@@ -68,45 +68,47 @@ export default function Home() {
 
   const videoOptions = {
     playerVars: {
-      autoplay: 1, // Autoplay the video
-      controls: 0, // Hide player controls
-      modestbranding: 1, // Hide YouTube logo and some UI elements
-      loop: 1, // Loop the video
-      playlist: 'DUfv1v_onVA', // Specify the video ID
-      mute: 1, // Mute the video
-      origin: 'https://your-website-url.com', // Specify the origin
-      // Set desired playback quality
-      // Options: 'small', 'medium', 'large', 'hd720', 'hd1080', 'highres'
-      // Default: 'auto'
-      // Note: Availability of quality options may vary depending on the video
+      autoplay: 1,
+      controls: 0,
+      modestbranding: 1,
+      loop: 1,
+      playlist: 'DUfv1v_onVA',
+      mute: 1,
+      origin: 'https://your-website-url.com',
       quality: 'highres',
-      showinfo: 0 // Hide video title and additional player actions
+      showinfo: 0
     },
     width: videoDimensions.width,
     height: videoDimensions.height
   };
 
   return (
-    <main className="w-full flex flex-col justify-center items-center bg-black">
-      <div className="z-50 fixed top-10 right-10 flex">
+    <main className="w-full min-h-dvh flex flex-col justify-center items-center bg-black">
+      <div className="z-50 fixed top-14 right-10 flex">
         <HamburgerBtn isOpen={openMenu} cb={setOpenMenu} />
       </div>
       <Drawer open={openMenu} onOpenChange={setOpenMenu} direction='left'>
         <DrawerContent>
           <DrawerHeader className="pt-16">
-            <Link href="/">About Us</Link>
-            <Link href="/">Our team</Link>
+            <ul className="font-heading text-4xl flex flex-col gap-10 uppercase text-center">
+              <li><Link href="/">Studio</Link></li>
+              <li><Link href="/">Editors</Link></li>
+              <li><Link href="/">Portfolio</Link></li>
+            </ul>
           </DrawerHeader>
         </DrawerContent>
       </Drawer>
       <div className={`pointer-events-none fixed z-0 top-0 ${openMenu ? 'blur-lg': ''}`}>
         <Video videoId="" opts={videoOptions} ref={videoRef} />
       </div>
-      <div className={`h-screen flex w-full z-10 items-center justify-center  gap-4 md:gap-8 ${openMenu ? 'blur-lg': ''}`}>
-        <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className="h-auto w-8 md:w-20 fixed top-4 left-5" />
-        <h1 className="text-white text-2xl mt-20 md:text-5xl tracking-widest font-heading uppercase">JumpCut Rabbit</h1>
+      <div className="h-dvh" />
+      <div className={`fixed flex top-0 left-0 right-0 bottom-0 z-10 items-center gap-0 justify-center ${openMenu ? 'blur-lg': ''}`}>
+        <h1 className="text-white text-2xl md:text-8xl font-heading tracking-widest uppercase">Jump</h1>
+        <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className=" h-auto w-6 md:w-16 mb-16" />
+        <h1 className="flex text-white text-2xl md:text-8xl mt-16 font-heading tracking-widest uppercase">Cut <div className="-mt-8">Rabbit</div></h1>
       </div>
-      <div className="flex z-10 bg-white w-full items-center flex-wrap">
+      <div className="flex flex-col z-10 bg-background/95 h-dvh w-full items-center justify-center">
+        <button className="font-heading uppercase bg-accent/90 py-5 px-8 text-black hover:bg-accent">Work with us</button>
         {clients.map((client, i) => <Image key={`${client}-${i}`} src={client.url} alt={client.name} width="0" height="0" className="w-60 h-auto"/>
         )}
       </div>

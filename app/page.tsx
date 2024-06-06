@@ -105,7 +105,7 @@ export default function Home() {
       <div className={`fixed flex top-0 left-0 right-0 bottom-0 z-10 items-center gap-0 justify-center ${openMenu ? 'blur-lg': ''}`}>
         <h1 className="text-white text-2xl md:text-8xl font-heading tracking-widest uppercase">Jump</h1>
         <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className=" h-auto w-6 md:w-16 mb-16" />
-        <h1 className="flex text-white text-2xl md:text-8xl mt-16 font-heading tracking-widest uppercase">Cut <div className="-mt-8">Rabbit</div></h1>
+        <h1 className="flex text-white text-2xl md:text-8xl mt-32 font-heading tracking-widest uppercase rotate-12">Cut <div className="-mt-20 -rotate-12">Rabbit</div></h1>
       </div>
       <div className="flex flex-col z-10 bg-background/95 h-dvh w-full items-center justify-center">
         <button className="font-heading uppercase bg-accent/90 py-5 px-8 text-black hover:bg-accent">Work with us</button>

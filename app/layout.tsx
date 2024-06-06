@@ -5,7 +5,7 @@ import Head from "next/head";
 
 const headingFont = h({
   subsets: ['latin'],
-  weight: '800',
+  weight: ['400', '600', '800'],
   display: 'swap',
   variable: '--font-heading',
 });

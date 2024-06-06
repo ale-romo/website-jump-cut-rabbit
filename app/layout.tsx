@@ -32,7 +32,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Jump Cut Rabbit</title>
       </Head>
-      <body className={`${headingFont.variable} ${bodyFont.variable} font-content dark`}>{children}</body>
+      <body className={`${headingFont.variable} ${bodyFont.variable} font-content dark text-foreground`}>{children}</body>
     </html>
   );
 }

@@ -2,6 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Video from 'react-youtube';
+import VideoPlayer from '@/components/VideoPlayer';
 import Link from 'next/link';
 const clients=[
   {
@@ -27,54 +28,11 @@ const clients=[
 ]
 
 export default function Home() {
-  const videoRef = useRef(null);
-  const [videoDimensions, setVideoDimensions] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    const resizeHandler = () => {
-      const aspectRatio = 16 / 9; // YouTube videos typically have a 16:9 aspect ratio
-      const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
-      let width = viewportWidth;
-      let height = viewportWidth / aspectRatio;
-
-      if (height < viewportHeight) {
-        height = viewportHeight;
-        width = viewportHeight * aspectRatio;
-      }
-
-      setVideoDimensions({ width, height });
-    };
-
-    // Initial resize
-    resizeHandler();
-
-    // Listen for window resize events
-    window.addEventListener('resize', resizeHandler);
-
-    return () => window.removeEventListener('resize', resizeHandler);
-  }, []);
-
-  const videoOptions = {
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      modestbranding: 1,
-      loop: 1,
-      playlist: 'DUfv1v_onVA',
-      mute: 1,
-      origin: 'https://your-website-url.com',
-      quality: 'highres',
-      showinfo: 0
-    },
-    width: videoDimensions.width,
-    height: videoDimensions.height
-  };
-
   return (
     <>
+    {/* Video */}
       <section className={`pointer-events-none fixed z-0 top-0`}>
-        <Video videoId="" opts={videoOptions} ref={videoRef} />
+        <VideoPlayer />
       </section>
       <div className="h-dvh" />
 
@@ -88,7 +46,7 @@ export default function Home() {
 
       {/* About Brief */}
 
-      <section className="flex flex-col z-10 items-around px-10 md:px-20 bg-background/95 h-dvh w-full items-center justify-around" id="about">
+      <section className="flex flex-col z-10 px-10 md:px-20 bg-background/95 h-dvh w-full items-center justify-around" id="about">
         <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className=" h-auto w-6 md:w-16" />
         <div className="text-center text-2xl flex flex-col gap-5 font-heading">
           <h1>We offer an efficient workflow, turning your projects into pure emotion.</h1><p>From award winning movies to impactful ads.</p>

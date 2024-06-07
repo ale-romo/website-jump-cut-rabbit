@@ -35,7 +35,7 @@ export default function RootLayout({
       </Head>
       <body className={`${headingFont.variable} ${bodyFont.variable} font-content dark text-foreground`}>
         <Nav />
-        <main className="w-full min-h-dvh flex flex-col justify-center items-center bg-background">
+        <main className="fade-in w-full min-h-dvh flex flex-col justify-center items-center bg-background">
           {children}
         </main>
       </body>

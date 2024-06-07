@@ -17,9 +17,10 @@ const Nav = () => {
       <DrawerContent>
         <DrawerHeader className="pt-16">
           <ul className="font-heading text-4xl flex flex-col gap-10 uppercase text-center">
-            <li><a href="/about">About</a></li>
-            <li><Link href="/editors">Editors</Link></li>
-            <li><Link href="/portfolio">Portfolio</Link></li>
+            <li><Link href="/" onClick={() => setOpenMenu(false)}>Home</Link></li>
+            <li><Link href="/about" onClick={() => setOpenMenu(false)}>About</Link></li>
+            <li><Link href="/editors" onClick={() => setOpenMenu(false)}>Editors</Link></li>
+            <li><Link href="/portfolio" onClick={() => setOpenMenu(false)}>Portfolio</Link></li>
           </ul>
         </DrawerHeader>
       </DrawerContent>

@@ -1,13 +1,33 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
 import Video, { YouTubeEvent } from 'react-youtube';
+import { Progress } from '@/components/ui/progress';
 
 const VideoPlayer = () => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [videoDimensions, setVideoDimensions] = useState({ width: 0, height: 0 });
+    const [counter, setCounter] = useState(0);
 
     useEffect(() => {
+      let interval: NodeJS.Timeout | null = null;
+
+      if (!isPlaying) {
+        interval = setInterval(() => {
+          setCounter((prevCounter) => (prevCounter < 100 ? prevCounter + 1 : 0));
+        }, 30); // 30 milliseconds to complete 100 steps in 3 seconds
+      }
+
+      return () => {
+        if (interval) clearInterval(interval);
+      };
+    }, [isPlaying]);
+
+    useEffect(() => {
+      setTimeout (() => {
+        setIsPlaying(true);
+      }, 1500)
+
       const resizeHandler = () => {
         const aspectRatio = 16 / 9; // YouTube videos typically have a 16:9 aspect ratio
         const viewportWidth = window.innerWidth;
@@ -33,7 +53,6 @@ const VideoPlayer = () => {
 
     //fade in when it starts playing
     const onPlayerStateChange = (event: YouTubeEvent<number>) => {
-      // The player state '1' means the video is playing
       if (event && event.data === 1) {
         setIsPlaying(true);
       }
@@ -56,8 +75,11 @@ const VideoPlayer = () => {
     };
 
   return <div className="w-full h-dvh">
+    {!isPlaying &&
+      <Progress value={counter} className="z-10 fixed top-0 left-0 w-full" />
+    }
+    <div className={`flex fixed top-0 left-0 right-0 bottom-0 bg-background transition-opacity opacity duration-1000 ${isPlaying ? 'opacity-0' : 'opacity-100'}`} />
     <Video videoId="" opts={videoOptions} ref={videoRef} onStateChange={onPlayerStateChange} />
-    <div className={`fixed w-full h-dvh bg-background fade-out ${isPlaying ? 'fade-out' : ''}`} />
   </div>
 }
 export default VideoPlayer;

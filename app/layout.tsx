@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Sora as h, Inter as b } from "next/font/google";
+import VideoPlayer from '@/components/VideoPlayer';
 import "./globals.css";
 import Head from "next/head";
 import Nav from "@/components/Nav";
+import { LanguageProvider } from '../contexts/LanguageContext';
 
 const headingFont = h({
   subsets: ['latin'],
@@ -34,10 +36,16 @@ export default function RootLayout({
         <title>Jump Cut Rabbit</title>
       </Head>
       <body className={`${headingFont.variable} ${bodyFont.variable} font-content dark text-foreground`}>
-        <Nav />
-        <main className="fade-in w-full min-h-dvh flex flex-col justify-center items-center bg-background">
-          {children}
-        </main>
+        <LanguageProvider>
+          <Nav />
+          <main className="w-full min-h-dvh flex flex-col justify-center items-center bg-red">
+            {/* Video */}
+            <section className={`pointer-events-none fixed z-0 top-0`}>
+              <VideoPlayer />
+            </section>
+            {children}
+          </main>
+        </LanguageProvider>
       </body>
     </html>
   );

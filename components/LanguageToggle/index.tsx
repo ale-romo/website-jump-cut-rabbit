@@ -1,4 +1,4 @@
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const LanguageToggle = () => {
   const { language, toggleLanguage } = useLanguage();
@@ -6,14 +6,14 @@ const LanguageToggle = () => {
   return (
     <div className="flex justify-center gap-2">
       <button
-        onClick={toggleLanguage}
+        onClick={() => toggleLanguage('en')}
         className={`uppercase ${language === 'en' ? 'opacity-100' : 'opacity-60'}`}
       >
         En
       </button>
       /
       <button
-        onClick={toggleLanguage}
+        onClick={() => toggleLanguage('es')}
         className={`uppercase ${language === 'es' ? 'opacity-100' : 'opacity-60'}`}
       >
         Es

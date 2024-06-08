@@ -4,7 +4,7 @@ import VideoPlayer from '@/components/VideoPlayer';
 import "./globals.css";
 import Head from "next/head";
 import Nav from "@/components/Nav";
-import { LanguageProvider } from '../contexts/LanguageContext';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 const headingFont = h({
   subsets: ['latin'],

@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react';
-import { useTranslations } from '../../hooks/useTranslations';
+import { useTranslations } from '@/hooks/useTranslations';
 import HamburgerBtn from '@/components/Nav/hamburgerBtn';
-import LanguageToggle from '../LanguageToggle';
+import LanguageToggle from '@/components/LanguageToggle';
 import {
   Drawer,
   DrawerContent,
@@ -14,7 +14,7 @@ const Nav = () => {
   const t = useTranslations().menu;
 
   return <>
-    <div className="z-50 fixed top-14 right-10 flex">
+    <div className="z-50 fixed top-8 right-8 flex">
       <HamburgerBtn isOpen={openMenu} cb={setOpenMenu} />
     </div>
     <Drawer open={openMenu} onOpenChange={setOpenMenu} direction='left'>
@@ -25,7 +25,7 @@ const Nav = () => {
             <li><Link href="/about" onClick={() => setOpenMenu(false)}>{t.about}</Link></li>
             <li><Link href="/editors" onClick={() => setOpenMenu(false)}>{t.editors}</Link></li>
             <li><Link href="/portfolio" onClick={() => setOpenMenu(false)}>{t.portfolio}</Link></li>
-            <li onClick={() => setOpenMenu(false)}><LanguageToggle /></li>
+            <li><LanguageToggle /></li>
           </ul>
         </DrawerHeader>
       </DrawerContent>

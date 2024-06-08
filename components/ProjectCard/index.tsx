@@ -15,9 +15,9 @@ const ProjectCard = ({title, image}: Project) => {
       setShowTitle(!showTitle);
     }
   }
-return<article onClick={() => handleShowTitle()} className="relative group">
+return<article onClick={() => handleShowTitle()} className="relative">
   <Image src={image} width="0" height="0" className="w-full h-auto" alt={title} />
-  <h2 className={`absolute flex top-0 left-0 right-0 bottom-0 ${showTitle ? '' : 'hidden'} md:group-hover:flex items-center justify-center text-center bg-accent capitalize p-16 md:p-8 text-2xl md:text-xl cursor-pointer`}>{title}</h2>
+  <h2 className={`absolute font-heading flex top-0 left-0 right-0 bottom-0 ${showTitle ? 'opacity-100' : 'opacity-0'} md:hover:opacity-100 transition-opacity duration-300 uppercase items-center justify-center text-center bg-accent p-16 md:p-8 text-2xl font-semibold md:text-xl cursor-pointer`}>{title}</h2>
 </article>}
 
 export default ProjectCard;

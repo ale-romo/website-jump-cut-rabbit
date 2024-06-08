@@ -4,8 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from '@/hooks/useTranslations';
 import { formatStringWithLineBreaks } from "@/components/ui/lineBreaker";
+import ContactButton from '@/components/ContactButton';
 
-const clients=[
+const clients = [
   {
     url: '/clients/netflix.svg',
     name: 'Netflix',
@@ -51,7 +52,7 @@ export default function Home() {
         <div className="text-center text-2xl flex flex-col gap-5 font-heading">
           <h1>{formatStringWithLineBreaks(t.about.semblance)}</h1>
         </div>
-        <button className="font-heading font-bold uppercase bg-accent/90 py-5 px-8 text-black hover:bg-accent">{t.home.cta}</button>
+        <ContactButton title={t.home.cta} />
         <div className="flex items-center justify-center w-full flex-wrap">
           {clients.map((client, i) => <div key={`${client}-${i}`} className="flex justify-center flex-shrink-0 w-1/2 md:w-1/5 opacity-50 hover:opacity-100 transition-opacity duration-300">
             <Link href="/portfolio">

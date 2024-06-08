@@ -1,5 +1,8 @@
-import ProjectCard,  { Project} from '@/components/ProjectCard';
+'use client'
+import ContactButton from '@/components/ContactButton';
+import ProjectCard,  { Project } from '@/components/ProjectCard';
 import Revealer from '@/components/Revealer';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const projects = [
   {
@@ -33,15 +36,17 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const t = useTranslations();
+
   return <div className="flex flex-col items-center gap-20 p-5 md:p-20 bg-background z-10">
     <Revealer />
-    <h1 className="font-heading font-bold uppercase text-2xl md:text-5xl tracking-wider">Portfolio</h1>
+    <h1 className="font-heading font-bold uppercase text-2xl md:text-5xl tracking-wider">{t.portfolio.title}</h1>
     <div className="flex flex-wrap gap-20 w-full justify-center">
-      {projects.map(project => <div key={project.title} className="w-5/6 md:w-1/4 xl:w-1/6">
+      {projects.map((project: Project) => <div key={project.title} className="w-5/6 md:w-1/4 xl:w-1/6">
         <ProjectCard {...project} />
       </div>)}
     </div>
-
+    <ContactButton title={t.portfolio.cta} />
   </div>
 }
 

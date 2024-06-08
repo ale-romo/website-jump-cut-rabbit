@@ -11,13 +11,15 @@ export interface Editor {
   cta: string;
 }
 
-const ProfileCard = ({ id, image, name, role, semblance, cta }: Editor) => <div id={id} className="flex flex-col gap-y-5 font-heading items-start">
+const ProfileCard = ({ id, image, name, role, semblance, cta }: Editor) => <div id={id} className="flex flex-col font-heading gap-y-5 items-start">
   <Image src={image} width="0" height="0" className="w-full h-auto" alt={name} />
-  <div className="flex flex-col">
-    <h3 className="font-semibold text-2xl">{name}</h3>
-    <h4 className="text uppercase">{role}</h4>
+  <div className="flex flex-col items-start px-10 gap-y-5 md:pr-20 md:pl-0">
+    <div className="flex flex-col">
+      <h3 className="flex font-semibold text-2xl w-full">{name}</h3>
+      <h4 className="text uppercase">{role}</h4>
+    </div>
+    <p className="">{formatStringWithLineBreaks(semblance)}</p>
+    <ContactButton title={cta} />
   </div>
-  <p className="px-10 md:pr-20 md:pl-0">{formatStringWithLineBreaks(semblance)}</p>
-  <ContactButton title={cta} />
 </div>
 export default ProfileCard;

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Sora as h, Inter as b } from "next/font/google";
-import VideoPlayer from '@/components/VideoPlayer';
+import VideoPlayer from '@/components/VimeoPlayer';
 import "./globals.css";
 import Head from "next/head";
 import Nav from "@/components/Nav";
@@ -44,6 +44,7 @@ export default function RootLayout({
               <VideoPlayer />
             </section>
             {children}
+            <button className="fixed bottom-40 left-1/2 bg-background/70 font-heading font-semibold uppercase -translate-x-1/2 border-2 border-accent text-accent px-4 py-2 rounded-lg">Let&apos;s Talk</button>
           </main>
         </LanguageProvider>
       </body>

@@ -24,7 +24,7 @@ const Nav = () => {
             <li><Link href="/" onClick={() => setOpenMenu(false)}>{t.home}</Link></li>
             <li><Link href="/about" onClick={() => setOpenMenu(false)}>{t.about}</Link></li>
             <li><Link href="/editors" onClick={() => setOpenMenu(false)}>{t.editors}</Link></li>
-            <li><Link href="/portfolio" onClick={() => setOpenMenu(false)}>{t.portfolio}</Link></li>
+            {/* <li><Link href="/portfolio" onClick={() => setOpenMenu(false)}>{t.portfolio}</Link></li> */}
             <li><LanguageToggle /></li>
           </ul>
         </DrawerHeader>

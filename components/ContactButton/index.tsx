@@ -1,17 +1,13 @@
 'use client'
 
+import { useState, useEffect } from 'react';
 import {Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import Image from 'next/image';
 
 const ContactButton = ({ title}: { title: string}) => {
-  // const [side, setSide] = useState('right')
+  const [side, setSide] = useState<'top' | 'bottom' | 'left' | 'right'>('right');
 
-  // useEffect(() => {
-  //   if(window.innerWidth < 768) {
-  //     setShowTitle(!showTitle);
-  //   }
-  // }[])
-  const side = window.innerWidth < 768 ? 'bottom' : 'right';
+  useEffect(() => setSide(window.innerWidth < 768 ? 'bottom' : 'right'), [])
   return <Popover>
     <PopoverTrigger className="font-heading uppercase font-bold bg-accent/90 py-5 px-8 text-black hover:bg-accent">{title}</PopoverTrigger>
     <PopoverContent className="p-3 flex-row flex items-center gap-3" side={side} sideOffset={0}>

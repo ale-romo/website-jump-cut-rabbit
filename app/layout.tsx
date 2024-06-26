@@ -5,6 +5,7 @@ import "./globals.css";
 import Head from "next/head";
 import Nav from "@/components/Nav";
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const headingFont = h({
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Jump Cut Rabbit</title>
       </Head>
+      <GoogleAnalytics />
       <body className={`${headingFont.variable} ${bodyFont.variable} font-content dark text-foreground`}>
         <LanguageProvider>
           <Nav />
@@ -44,7 +46,6 @@ export default function RootLayout({
               <VideoPlayer />
             </section>
             {children}
-            <button className="fixed bottom-40 left-1/2 bg-background/70 font-heading font-semibold uppercase -translate-x-1/2 border-2 border-accent text-accent px-4 py-2 rounded-lg">Let&apos;s Talk</button>
           </main>
         </LanguageProvider>
       </body>

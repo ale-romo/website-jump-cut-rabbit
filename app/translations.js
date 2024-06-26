@@ -7,7 +7,8 @@ export const translations = {
       portfolio: 'portfolio'
     },
     home: {
-      cta: 'Let’s talk'
+      cta: 'Let’s talk',
+      videoDisclaimer: 'for visualization purposes only'
     },
     about: {
       semblance:'We offer an efficient workflow, turning your projects into pure emotion.\n\n From award winning movies to impactful ads.',
@@ -67,7 +68,8 @@ export const translations = {
       portfolio: 'portafolio'
     },
     home: {
-      cta: 'Hablemos'
+      cta: 'Hablemos',
+      videoDisclaimer: 'para propósitos de visualización únicamente'
     },
     about: {
       semblance: 'Ofrecemos un flujo de trabajo eficiente, transformando tus proyectos en pura emoción.\n\n Desde películas galardonadas hasta anuncios impactantes.',

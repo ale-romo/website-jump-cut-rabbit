@@ -75,7 +75,7 @@ export default function Index() {
       {!isPlaying &&
         <Progress value={counter} className="z-10 fixed top-0 left-0 w-full" />
       }
-      <div id="bgVideo"></div>
+      <div id="bgVideo" className={`transition-opacity duration-1000 ${isPlaying ? 'opacity-100' : 'opacity-0'}`}></div>
     </div>
   );
 }

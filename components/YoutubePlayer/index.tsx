@@ -78,7 +78,7 @@ const VideoPlayer = () => {
     {!isPlaying &&
       <Progress value={counter} className="z-10 fixed top-0 left-0 w-full" />
     }
-    <div className={`flex fixed top-0 left-0 right-0 bottom-0 bg-background transition-opacity opacity duration-1000 ${isPlaying ? 'opacity-0' : 'opacity-100'}`} />
+    <div className={`flex fixed top-0 left-0 right-0 bottom-0 bg-background transition-opacity duration-1000 ${isPlaying ? 'opacity-0' : 'opacity-100'}`} />
     <Video videoId="" opts={videoOptions} ref={videoRef} onStateChange={onPlayerStateChange} />
   </div>
 }

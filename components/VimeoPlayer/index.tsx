@@ -28,7 +28,7 @@ export default function Index() {
   };
 
   // Function to initialize Vimeo player
-  const initializeVimeoPlayer = (width, height) => {
+  const initializeVimeoPlayer = (width:number, height:number) => {
     const opts = {
       id: 968486878,
       width: width,

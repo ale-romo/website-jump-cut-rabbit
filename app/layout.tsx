@@ -35,6 +35,7 @@ export default function RootLayout({
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Jump Cut Rabbit</title>
+        <link rel='icon' href='/icons/favicon.png' />
       </Head>
       <GoogleAnalytics />
       <body className={`${headingFont.variable} ${bodyFont.variable} font-content dark text-foreground`}>

@@ -47,17 +47,17 @@ export default function Home() {
         </div>
         <h3 className="text-heading md:text-2xl lg:text-3xl  uppercase tracking-widest text-foreground">Editing studio</h3>
         <div className="absolute top-3/4">
-          <ContactButton title={t.home.cta} />
+          <ContactButton accent={false} title={t.home.cta} />
         </div>
-        <p className="absolute bottom-10 text-xl text-center left-1/2 -translate-x-1/2 text-foreground/40">{t.home.videoDisclaimer}</p>
+        <p className="absolute bottom-10 text-md md:text-xl text-center left-1/2 -translate-x-1/2 text-foreground/40">{t.home.videoDisclaimer}</p>
       </section>
 
       {/* About Brief */}
 
-      <section className="flex flex-col z-10 px-10 md:px-20 bg-background/95 h-dvh w-full items-center justify-around" id="about">
+      <section className="flex flex-col z-10 px-10 md:px-20 h-dvh w-full items-center justify-around bg-gradient-to-b from-background/80 to-50% to-background" id="about">
         <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className=" h-auto w-6 md:w-16" />
-        <div className="text-center text-2xl flex flex-col gap-5 font-heading">
-          <h1>{formatStringWithLineBreaks(t.about.semblance)}</h1>
+        <div className="text-center text-xl md:text-2xl flex flex-col gap-5 font-heading">
+          <h1 className="font-light">{formatStringWithLineBreaks(t.about.semblance)}</h1>
         </div>
         <ContactButton title={t.home.cta} />
         <div className="flex items-center justify-center w-full flex-wrap">

@@ -3,7 +3,7 @@ export const translations = {
     menu: {
       home: 'home',
       about: 'about',
-      editors: 'editors',
+      editors: 'team',
       portfolio: 'portfolio'
     },
     home: {
@@ -11,7 +11,7 @@ export const translations = {
       videoDisclaimer: 'for visualization purposes only'
     },
     about: {
-      semblance:'We offer an efficient workflow, turning your projects into pure emotion.\n\n From award winning movies to impactful ads.',
+      semblance:'We offer an efficient workflow, turning your projects into pure emotion.\n From award winning movies to impactful ads.',
       cta: 'Work with us'
     },
     editors: {
@@ -64,7 +64,7 @@ export const translations = {
     menu: {
       home: 'inicio',
       about: 'acerca',
-      editors: 'editores',
+      editors: 'equipo',
       portfolio: 'portafolio'
     },
     home: {
@@ -72,7 +72,7 @@ export const translations = {
       videoDisclaimer: 'para propósitos de visualización únicamente'
     },
     about: {
-      semblance: 'Ofrecemos un flujo de trabajo eficiente, transformando tus proyectos en pura emoción.\n\n Desde películas galardonadas hasta anuncios impactantes.',
+      semblance: 'Ofrecemos un flujo de trabajo eficiente, transformando tus proyectos en pura emoción.\n Desde películas galardonadas hasta anuncios impactantes.',
       cta: 'Trabaja con nosotros'
     },
     editors: {

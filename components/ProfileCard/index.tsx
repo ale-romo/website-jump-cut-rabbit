@@ -22,7 +22,7 @@ const ProfileCard = ({ id, image, name,imdb, role, semblance, cta }: Editor) => 
       <h3 className="flex font-semibold text-2xl w-full">{name}</h3>
       <h4 className="text uppercase">{role}</h4>
     </div>
-    <p className="">{formatStringWithLineBreaks(semblance)}</p>
+    <p className="font-thin leading-relaxed">{formatStringWithLineBreaks(semblance)}</p>
     <ContactButton title={cta} />
   </div>
 </div>

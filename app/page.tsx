@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useTranslations } from '@/hooks/useTranslations';
 import { formatStringWithLineBreaks } from "@/components/ui/lineBreaker";
 import ContactButton from '@/components/ContactButton';
+import ChevDown from '@/components/ChevDown';
 
 const clients = [
   {
@@ -49,12 +50,15 @@ export default function Home() {
         <div className="absolute top-3/4">
           <ContactButton accent={false} title={t.home.cta} />
         </div>
-        <p className="absolute bottom-10 text-md md:text-xl text-center left-1/2 -translate-x-1/2 text-foreground/40">{t.home.videoDisclaimer}</p>
+        <p className="absolute bottom-14 text-md md:text-xl text-center left-1/2 -translate-x-1/2 text-foreground/40">{t.home.videoDisclaimer}</p>
       </section>
 
       {/* About Brief */}
 
-      <section className="flex flex-col z-10 px-10 md:px-20 h-dvh w-full items-center justify-around bg-gradient-to-b from-background/80 to-50% to-background" id="about">
+      <section className="relative flex flex-col z-10 px-10 md:px-20 h-dvh w-full items-center justify-around bg-gradient-to-b from-background/80 to-50% to-background" id="about">
+        <div className="absolute flex items-center -top-8 bg-background/80 pt-1 pb-4 px-6 rounded-t-xl">
+          <ChevDown />
+        </div>
         <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className=" h-auto w-6 md:w-16" />
         <div className="text-center text-xl md:text-2xl flex flex-col gap-5 font-heading">
           <h1 className="font-light">{formatStringWithLineBreaks(t.about.semblance)}</h1>

@@ -12,7 +12,7 @@ export const translations = {
     },
     about: {
       semblance:'We offer an efficient workflow, turning your projects into pure emotion.\n From award winning movies to impactful ads.',
-      cta: 'Work with us'
+      cta: 'Let’s talk',
     },
     editors: {
       title: 'Founding Members',
@@ -73,7 +73,7 @@ export const translations = {
     },
     about: {
       semblance: 'Ofrecemos un flujo de trabajo eficiente, transformando tus proyectos en pura emoción.\n Desde películas galardonadas hasta anuncios impactantes.',
-      cta: 'Trabaja con nosotros'
+      cta: 'Hablemos',
     },
     editors: {
       title: 'Miembros fundadores',

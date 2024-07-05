@@ -50,7 +50,7 @@ export const translations = {
           name: 'Victoria Mariño',
           imdb: 'https://www.imdb.com/name/nm7065407/?ref_=fn_al_nm_2',
           role: 'Lead Editor',
-          semblance: '(Cáceres, Spain, 1975). Communication Sciences Degree at the Complutense University of Madrid. She has worked as lead editor in different audiovisual formats; advertising, realities, documentaries, series and and feature films for companies such as AXN, Discovery, ESPN, A&E, VH1, Freemantle, EndemolShine Boomdog, Netflix, Amazon and Disney Channel.',
+          semblance: 'Communication Sciences Degree at the Complutense University of Madrid. She has worked as lead editor in different audiovisual formats; advertising, realities, documentaries, series and and feature films for companies such as AXN, Discovery, ESPN, A&E, VH1, Freemantle, EndemolShine Boomdog, Netflix, Amazon and Disney Channel.',
           cta: 'Reach out',
         },
       ]
@@ -111,7 +111,7 @@ export const translations = {
           name: 'Victoria Mariño',
           imdb: 'https://www.imdb.com/name/nm7065407/?ref_=fn_al_nm_2',
           role: 'Editora Principal',
-          semblance: '(Cáceres, España, 1975). Licenciada en Ciencias de la Comunicación por la Universidad Complutense de Madrid. Ha trabajado como editora principal en diferentes formatos audiovisuales: publicidad, realities, documentales, series y largometrajes para empresas como AXN, Discovery, ESPN, A&E, VH1, Freemantle, EndemolShine Boomdog, Netflix, Amazon y Disney Channel.',
+          semblance: 'Licenciada en Ciencias de la Comunicación por la Universidad Complutense de Madrid. Ha trabajado como editora principal en diferentes formatos audiovisuales: publicidad, realities, documentales, series y largometrajes para empresas como AXN, Discovery, ESPN, A&E, VH1, Freemantle, EndemolShine Boomdog, Netflix, Amazon y Disney Channel.',
           cta: 'Contacto',
         },
       ]

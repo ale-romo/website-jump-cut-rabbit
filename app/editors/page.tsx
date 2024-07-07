@@ -23,10 +23,10 @@ const Editors = () => {
       </li>)}
       </ul>
       <div className="md:w-1/2 flex flex-col gap-20 max-h-dvh overflow-scroll pb-20">
-        <h1 className="flex w-ful min-h-dvh items-center justify-center font-heading text-3xl font-bold">{editors.title}
-        <div className="absolute flex items-center bottom-5 md:hidden">
-          <ChevDown />
-        </div>
+        <h1 className="relative flex w-ful min-h-dvh items-center justify-center font-heading text-3xl font-bold">{editors.title}
+          <div className="absolute flex items-center bottom-5 md:hidden">
+            <ChevDown />
+          </div>
         </h1>
         {editors.editors.map((editor: Editor) => <ProfileCard key={editor.name} {...editor}/>)}
       </div>

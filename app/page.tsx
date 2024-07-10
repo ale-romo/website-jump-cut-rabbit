@@ -48,7 +48,7 @@ export default function Home() {
         </div>
         <h3 className="text-heading md:text-2xl lg:text-3xl  uppercase tracking-widest text-foreground">Editing studio</h3>
         <div className="absolute top-3/4">
-          <ContactButton accent={false} title={t.home.cta} />
+          {/* <ContactButton accent={false} title={t.home.cta} /> */}
         </div>
         <p className="absolute bottom-14 text-md md:text-xl text-center left-1/2 -translate-x-1/2 text-foreground/40">{t.home.videoDisclaimer}</p>
       </section>

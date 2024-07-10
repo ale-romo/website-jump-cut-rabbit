@@ -32,7 +32,7 @@ export const translations = {
           name: 'Luis Mercado',
           imdb: 'https://www.imdb.com/name/nm3327127/?ref_=nv_sr_srsg_6_tt_0_nm_8_q_Luis%2520mercado%2520',
           role: 'Project Coordinator',
-          semblance: 'With extensive experience in various stages of film and video production. Luis has worked with high profile clients, including Fortune 500 companies, with expertise in film, commercial, and video editing to deliver top quality results.',
+          semblance: 'With extensive experience in various stages of film and video production, Luis has worked with high profile clients, including Fortune 500 companies, with expertise in film, commercial, and video editing to deliver top quality results.',
           cta: 'Reach out',
         },
         {
@@ -40,8 +40,8 @@ export const translations = {
           image: 'editors/marina.jpg',
           name: 'Marina Viruete',
           imdb: 'https://www.imdb.com/name/nm4687253/?ref_=nv_sr_srsg_0_tt_0_nm_4_q_marina%2520viruete',
-          role: 'Editor.',
-          semblance: 'Has worked in advertising, films, series, and documentaries for platforms such as Amazon, Fox, public TV channels, among others.  As a graduate in communication sciences,I am interested in images and the processes that surround them.',
+          role: 'Editor',
+          semblance: 'She has worked in advertising, films, series, and documentaries for platforms such as Amazon, Fox, public TV channels, and others.  As a graduate in Communication Sciences, I am interested in images and the processes that surround them.',
           cta: 'Reach out',
         },
         {
@@ -50,7 +50,7 @@ export const translations = {
           name: 'Victoria Mariño',
           imdb: 'https://www.imdb.com/name/nm7065407/?ref_=fn_al_nm_2',
           role: 'Lead Editor',
-          semblance: 'Communication Sciences Degree at the Complutense University of Madrid. She has worked as lead editor in different audiovisual formats; advertising, realities, documentaries, series and and feature films for companies such as AXN, Discovery, ESPN, A&E, VH1, Freemantle, EndemolShine Boomdog, Netflix, Amazon and Disney Channel.',
+          semblance: 'Communication Sciences Degree at the Complutense University of Madrid. She has worked as lead editor in different audiovisual formats; advertising, realities, documentaries, series and feature films for companies such as AXN, Discovery, ESPN, A&E, VH1, TVE, Freemantle, EndemolShine Boomdog, Netflix, Amazon and Disney Channel.',
           cta: 'Reach out',
         },
       ]
@@ -93,7 +93,7 @@ export const translations = {
           name: 'Luis Mercado',
           imdb: 'https://www.imdb.com/name/nm3327127/?ref_=nv_sr_srsg_6_tt_0_nm_8_q_Luis%2520mercado%2520',
           role: 'Coordinador de Proyecto',
-          semblance: 'Con amplia experiencia en varias etapas de la producción de cine y video. Luis ha trabajado con clientes de alto perfil, incluidas empresas Fortune 500, con experiencia en edición de cine, comerciales y videos para entregar resultados de la más alta calidad.',
+          semblance: 'Con amplia experiencia en varias etapas de la producción de cine y video, Luis ha trabajado con clientes de alto perfil, incluidas empresas Fortune 500, con experiencia en edición de cine, comerciales y videos para entregar resultados de la más alta calidad.',
           cta: 'Contacto',
         },
         {
@@ -102,7 +102,7 @@ export const translations = {
           name: 'Marina Viruete',
           imdb: 'https://www.imdb.com/name/nm4687253/?ref_=nv_sr_srsg_0_tt_0_nm_4_q_marina%2520viruete',
           role: 'Editora',
-          semblance: 'Ha trabajado en publicidad, películas, series y documentales para plataformas como Amazon, Fox, canales de televisión pública, entre otros. Como licenciada en ciencias de la comunicación, me interesan las imágenes y los procesos que las rodean.',
+          semblance: 'Ella ha trabajado en publicidad, películas, series y documentales para plataformas como Amazon, Fox, canales de televisión pública, y otros. Como Licenciada en Ciencias de la Comunicación, me interesan las imágenes y los procesos que las rodean.',
           cta: 'Contacto',
         },
         {
@@ -111,7 +111,7 @@ export const translations = {
           name: 'Victoria Mariño',
           imdb: 'https://www.imdb.com/name/nm7065407/?ref_=fn_al_nm_2',
           role: 'Editora Principal',
-          semblance: 'Licenciada en Ciencias de la Comunicación por la Universidad Complutense de Madrid. Ha trabajado como editora principal en diferentes formatos audiovisuales: publicidad, realities, documentales, series y largometrajes para empresas como AXN, Discovery, ESPN, A&E, VH1, Freemantle, EndemolShine Boomdog, Netflix, Amazon y Disney Channel.',
+          semblance: 'Licenciada en Ciencias de la Comunicación por la Universidad Complutense de Madrid. Ha trabajado como editora principal en diferentes formatos audiovisuales: publicidad, realities, documentales, series y largometrajes para empresas como AXN, Discovery, ESPN, A&E, VH1, TVE, Freemantle, EndemolShine Boomdog, Netflix, Amazon y Disney Channel.',
           cta: 'Contacto',
         },
       ]

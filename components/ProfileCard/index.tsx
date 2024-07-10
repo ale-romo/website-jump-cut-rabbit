@@ -23,7 +23,7 @@ const ProfileCard = ({ id, image, name,imdb, role, semblance, cta }: Editor) => 
       <h4 className="text uppercase">{role}</h4>
     </div>
     <p className="font-thin leading-relaxed">{formatStringWithLineBreaks(semblance)}</p>
-    <ContactButton title={cta} />
+    {/* <ContactButton title={cta} /> */}
   </div>
 </div>
 export default ProfileCard;

@@ -41,7 +41,7 @@ export const translations = {
           name: 'Marina Viruete',
           imdb: 'https://www.imdb.com/name/nm4687253/?ref_=nv_sr_srsg_0_tt_0_nm_4_q_marina%2520viruete',
           role: 'Editor',
-          semblance: 'She has worked in advertising, films, series, and documentaries for platforms such as Amazon, Fox, public TV channels, and others.  As a graduate in Communication Sciences, I am interested in images and the processes that surround them.',
+          semblance: 'She has worked in advertising, films, series, and documentaries for platforms such as Amazon, Fox, public TV channels, and others.  As a Graduate in Communication Sciences, I am interested in images and the processes that surround them.',
           cta: 'Reach out',
         },
         {

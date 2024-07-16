@@ -2,6 +2,7 @@
 import Player from "@vimeo/player";
 import React, { useEffect, useState } from "react";
 import { Progress } from '@/components/ui/progress';
+import { videoId } from "@/app/translations";
 
 export default function Index() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -30,7 +31,7 @@ export default function Index() {
   // Function to initialize Vimeo player
   const initializeVimeoPlayer = (width:number, height:number) => {
     const opts = {
-      id: 968486878,
+      id: videoId,
       width: width,
       height: height,
       autoplay: true,

@@ -7,29 +7,6 @@ import { formatStringWithLineBreaks } from "@/components/ui/lineBreaker";
 import ContactButton from '@/components/ContactButton';
 import ChevDown from '@/components/ChevDown';
 
-const clients = [
-  {
-    url: '/clients/netflix.svg',
-    name: 'Netflix',
-  },
-  {
-    url: '/clients/hbo.svg',
-    name: 'HBO',
-  },
-  {
-    url: '/clients/disney.svg',
-    name: 'Disney',
-  },
-  {
-    url: '/clients/amazon.svg',
-    name: 'Amazon',
-  },
-  {
-    url: '/clients/fox.svg',
-    name: 'Fox',
-  },
-]
-
 export default function Home() {
   const t = useTranslations();
 
@@ -40,7 +17,7 @@ export default function Home() {
 
       {/* Header */}
 
-      <section className={`fixed flex flex-col top-0 left-0 right-0 bottom-0 z-10 items-center gap-2 justify-center`}  >
+      <section className={`fixed flex flex-col top-0 left-0 right-0 bottom-0 z-10 items-center gap-2 justify-center`}>
         <div className="flex text-2xl md:text-6xl lg:text-8xl">
           <h2 className="text-white font-heading font-bold tracking-wider uppercase">Jumpcut</h2>
           <Image src="/logo.svg" alt="Jump Cut Rabbit Studios" width="0" height="0" className=" h-auto w-5 md:w-10 md:-mt-10 lg:w-16 -mt-6 lg:-mt-16 mx-2" />
@@ -50,7 +27,8 @@ export default function Home() {
         <div className="absolute top-3/4">
           {/* <ContactButton accent={false} title={t.home.cta} /> */}
         </div>
-        <p className="absolute bottom-14 text-md md:text-xl text-center left-1/2 -translate-x-1/2 text-foreground/40">{t.home.videoDisclaimer}</p>
+        <p className="w-3/4 absolute bottom-20 text-md md:text-xl text-center left-1/2 -translate-x-1/2 text-foreground/40">{t.home.videoDisclaimer}</p>
+        <p className="w-full sm:w-3/4 absolute bottom-10 text-xs md:text-sm text-center left-1/2 -translate-x-1/2 text-foreground/50">{t.home.videoDisclaimer2}</p>
       </section>
 
       {/* About Brief */}
@@ -65,7 +43,7 @@ export default function Home() {
         </div>
         <ContactButton title={t.home.cta} />
         <div className="flex items-center justify-center w-full flex-wrap">
-          {clients.map((client, i) => <div key={`${client}-${i}`} className="flex justify-center flex-shrink-0 w-1/2 md:w-1/5 opacity-50 hover:opacity-100 transition-opacity duration-300">
+          {t.home.clients.map((client: {url: string, name: string }, i: number) => <div key={`${client}-${i}`} className="flex justify-center flex-shrink-0 w-1/2 md:w-1/5 opacity-50 hover:opacity-100 transition-opacity duration-300">
             <Link href="/portfolio">
               <Image src={client.url} alt={client.name} width="0" height="0" className="w-20 md:w-28 h-auto m-5"/>
             </Link>

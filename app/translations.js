@@ -1,3 +1,5 @@
+export const videoId = 985191112;
+
 export const translations = {
   en: {
     menu: {
@@ -8,7 +10,30 @@ export const translations = {
     },
     home: {
       cta: 'Let’s talk',
-      videoDisclaimer: 'for visualization purposes only'
+      videoDisclaimer: 'for visualization purposes only',
+      videoDisclaimer2: '*This reel shows projects in which Jumpcut Rabbit members have been part of the editorial department.',
+      clients: [
+        {
+          url: '/clients/netflix.svg',
+          name: 'Netflix',
+        },
+        {
+          url: '/clients/hbo.svg',
+          name: 'HBO',
+        },
+        {
+          url: '/clients/disney.svg',
+          name: 'Disney',
+        },
+        {
+          url: '/clients/amazon.svg',
+          name: 'Amazon',
+        },
+        {
+          url: '/clients/fox.svg',
+          name: 'Fox',
+        },
+      ]
     },
     about: {
       semblance:'We offer an efficient workflow, turning your projects into pure emotion.\n From award winning movies to impactful ads.',
@@ -69,7 +94,8 @@ export const translations = {
     },
     home: {
       cta: 'Hablemos',
-      videoDisclaimer: 'para propósitos de visualización únicamente'
+      videoDisclaimer: 'para propósitos de visualización únicamente',
+      videoDisclaimer2: '*Este reel muestra proyectos en los que los miembros de Jumpcut Rabbit han formado parte del departamento editorial.',
     },
     about: {
       semblance: 'Ofrecemos un flujo de trabajo eficiente, transformando tus proyectos en pura emoción.\n Desde películas galardonadas hasta anuncios impactantes.',

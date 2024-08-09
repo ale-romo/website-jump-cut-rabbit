@@ -8,6 +8,7 @@ export default function Index() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [counter, setCounter] = useState(0);
   const [videoDimensions, setVideoDimensions] = useState({ width: 0, height: 0 });
+  const [videoPlayer, setVideoPlayer] = useState<Player | null>(null);
 
   // Function to handle resizing the video dimensions
   const resizeHandler = () => {
@@ -24,12 +25,20 @@ export default function Index() {
 
     setVideoDimensions({ width, height });
 
-    // Initialize the Vimeo player once dimensions are set
-    initializeVimeoPlayer(width, height);
+    // If the player already exists, update its DOM element dimensions
+    if (videoPlayer) {
+      const iframe = document.getElementById('bgVideo')?.querySelector('iframe');
+      if (iframe) {
+        iframe.style.width = `${width}px`;
+        iframe.style.height = `${height}px`;
+      }
+    } else {
+      initializeVimeoPlayer(width, height)
+    }
   };
 
   // Function to initialize Vimeo player
-  const initializeVimeoPlayer = (width:number, height:number) => {
+  const initializeVimeoPlayer = (width: number, height: number) => {
     const opts = {
       id: videoId,
       width: width,
@@ -39,13 +48,15 @@ export default function Index() {
       loop: true,
     };
 
-    const video01Player = new Player("bgVideo", opts);
+    const player = new Player("bgVideo", opts);
 
-    video01Player.setVolume(0);
+    player.setVolume(0);
 
-    video01Player.on("play", function () {
+    player.on("play", function () {
       setIsPlaying(true);
     });
+
+    setVideoPlayer(player);
   };
 
   // Initial resize and set up event listener for window resize
@@ -54,7 +65,7 @@ export default function Index() {
     window.addEventListener('resize', resizeHandler);
 
     return () => window.removeEventListener('resize', resizeHandler);
-  }, []);
+  }, [videoPlayer]);
 
   // Loader
   useEffect(() => {
@@ -70,6 +81,13 @@ export default function Index() {
       if (interval) clearInterval(interval);
     };
   }, [isPlaying]);
+
+  // Initialize the Vimeo player when video dimensions change
+  useEffect(() => {
+    if (!videoPlayer) {
+      initializeVimeoPlayer(videoDimensions.width, videoDimensions.height);
+    }
+  }, [videoDimensions]);
 
   return (
     <div>

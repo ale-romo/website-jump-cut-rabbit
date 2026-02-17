@@ -43,10 +43,8 @@ export default function Home() {
         </div>
         <ContactButton title={t.home.cta} />
         <div className="flex items-center justify-center w-full flex-wrap">
-          {t.home.clients.map((client: {url: string, name: string }, i: number) => <div key={`${client}-${i}`} className="flex justify-center flex-shrink-0 w-1/2 md:w-1/5 opacity-50 hover:opacity-100 transition-opacity duration-300">
-            <Link href="/portfolio">
-              <Image src={client.url} alt={client.name} width="0" height="0" className="w-20 md:w-28 h-auto m-5"/>
-            </Link>
+          {t.home.clients.map((client: {url: string, name: string }, i: number) => <div key={`${client}-${i}`} className="flex justify-center flex-shrink-0 w-1/2 md:w-1/5 opacity-50 hover:opacity-100 transition-opacity duration-300">     
+            <Image src={client.url} alt={client.name} width="0" height="0" className="w-20 md:w-28 h-auto m-5"/>
           </div>
           )}
         </div>

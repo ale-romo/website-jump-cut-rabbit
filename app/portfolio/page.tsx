@@ -41,11 +41,11 @@ const Portfolio = () => {
   return <div className="flex flex-col items-center gap-20 p-5 md:p-20 bg-background z-10">
     <Revealer />
     <h1 className="font-heading font-bold uppercase text-2xl md:text-5xl tracking-wider">{t.portfolio.title}</h1>
-    <div className="flex flex-wrap gap-20 w-full justify-center">
+    {/* <div className="flex flex-wrap gap-20 w-full justify-center">
       {projects.map((project: Project) => <div key={project.title} className="w-5/6 md:w-1/4 xl:w-1/6">
         <ProjectCard {...project} />
       </div>)}
-    </div>
+    </div> */}
     <ContactButton title={t.portfolio.cta} />
   </div>
 }
